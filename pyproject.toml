@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "graphic-recording-mcp"
+version = "0.1.0"
+description = "MCP server for generating graphic recording style HTML from Markdown"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=0.1.0",
+    "uvicorn>=0.15.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "uvx",
+]
+
+[tool.uvx]
+entry = "src.graphic_recording_mcp.main:mcp" 
